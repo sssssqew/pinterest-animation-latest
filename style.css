@@ -1,0 +1,210 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0; padding: 0;
+}
+.container{
+    border: 1px solid red;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    gap: .5rem;
+}
+.container .card{
+    width: calc(100% / 7); height: 400px;
+    flex: none;
+    opacity: 0;
+}
+.container:nth-child(1) .card{
+    background-color: orange;
+}
+.container:nth-child(2) .card{
+    background-color: blueviolet;
+}
+.container:nth-child(3) .card{
+    background-color: greenyellow;
+}
+.container:nth-child(4) .card{
+    background-color: skyblue;
+}
+.container:nth-child(5) .card{
+    background-color: hotpink;
+}
+.card:nth-child(7n+1), .card:nth-child(7n){
+    position: relative;
+    top: -15rem;
+}
+.card:nth-child(7n+2), .card:nth-child(7n+6){
+    position: relative;
+    top: -10rem;
+}
+.card:nth-child(7n+3), .card:nth-child(7n+5){
+    position: relative;
+    top: -5rem;
+}
+
+
+/* .container:nth-child(1) .card{
+    animation: fadein .3s ease-in forwards, fadeout .3s ease-out 2s forwards;
+} */
+/* .container:nth-child(2) .card{
+    animation: fadein .3s ease-in forwards 2.6s, fadeout .3s ease-out 4.9s forwards;
+}
+.container:nth-child(3) .card{
+    animation: fadein .3s ease-in forwards 5.2s, fadeout .3s ease-out 7.5s forwards;
+}
+.container:nth-child(4) .card{
+    animation: fadein .3s ease-in forwards 7.8s, fadeout .3s ease-out 10.1s forwards;
+}
+.container:nth-child(5) .card{
+    animation: fadein .3s ease-in forwards 10.4s, fadeout .3s ease-out 12.7s forwards;
+} */
+
+
+
+
+.container:nth-child(1) .card:nth-child(7n+1){
+    animation: fadein .3s ease-in 0s forwards, fadeout .3s ease-out 2s forwards;
+}
+.container:nth-child(1) .card:nth-child(7n+2){
+    animation: fadein .3s ease-in .1s forwards, fadeout .3s ease-out 2.2s forwards;
+}
+.container:nth-child(1) .card:nth-child(7n+3){
+    animation: fadein .3s ease-in .2s forwards, fadeout .3s ease-out 2.4s forwards;
+}
+.container:nth-child(1) .card:nth-child(7n+4){
+    animation: fadein .3s ease-in .3s forwards, fadeout .3s ease-out 2.6s forwards;
+}
+.container:nth-child(1) .card:nth-child(7n+5){
+    animation: fadein .3s ease-in .4s forwards, fadeout .3s ease-out 2.8s forwards;
+}
+.container:nth-child(1) .card:nth-child(7n+6){
+    animation: fadein .3s ease-in .5s forwards, fadeout .3s ease-out 3.0s forwards;
+}
+.container:nth-child(1) .card:nth-child(7n+7){
+    animation: fadein .3s ease-in .6s forwards, fadeout .3s ease-out 3.2s forwards;
+}
+
+
+/* 규칙 */
+/* 1. 마지막 페이드아웃 시각을 그 다음 첫번째 시각으로 설정함 */
+/* 2. 첫번째 카드의 페이드아웃 시각은 페이드인 듀레이션 + 디레이 + 2s */
+/* 3. 나머지 카드의 디레이의 경우 페이드인은 첫번째 카드 디레이 + 0.1s, 페이드아웃은 첫번째 카드 디레이 + 0.2s */
+.container:nth-child(2) .card:nth-child(7n+1){
+    animation: fadein .3s ease-in forwards 3.2s, fadeout .3s ease-out 5.5s forwards;
+}
+.container:nth-child(2) .card:nth-child(7n+2){
+    animation: fadein .3s ease-in forwards 3.3s, fadeout .3s ease-out 5.7s forwards;
+}
+.container:nth-child(2) .card:nth-child(7n+3){
+    animation: fadein .3s ease-in forwards 3.4s, fadeout .3s ease-out 5.9s forwards;
+}
+.container:nth-child(2) .card:nth-child(7n+4){
+    animation: fadein .3s ease-in forwards 3.5s, fadeout .3s ease-out 6.1s forwards;
+}
+.container:nth-child(2) .card:nth-child(7n+5){
+    animation: fadein .3s ease-in forwards 3.6s, fadeout .3s ease-out 6.3s forwards;
+}
+.container:nth-child(2) .card:nth-child(7n+6){
+    animation: fadein .3s ease-in forwards 3.7s, fadeout .3s ease-out 6.5s forwards;
+}
+.container:nth-child(2) .card:nth-child(7n+7){
+    animation: fadein .3s ease-in forwards 3.8s, fadeout .3s ease-out 6.7s forwards;
+}
+
+
+/* 첫번째 컨테이너 + 1.2s */
+.container:nth-child(3) .card:nth-child(7n+1){
+    animation: fadein .3s ease-in forwards 6.7s, fadeout .3s ease-out 9s forwards;
+}
+.container:nth-child(3) .card:nth-child(7n+2){
+    animation: fadein .3s ease-in forwards 6.8s, fadeout .3s ease-out 9.2s forwards;
+}
+.container:nth-child(3) .card:nth-child(7n+3){
+    animation: fadein .3s ease-in forwards 6.9s, fadeout .3s ease-out 9.4s forwards;
+}
+.container:nth-child(3) .card:nth-child(7n+4){
+    animation: fadein .3s ease-in forwards 7.0s, fadeout .3s ease-out 9.6s forwards;
+}
+.container:nth-child(3) .card:nth-child(7n+5){
+    animation: fadein .3s ease-in forwards 7.1s, fadeout .3s ease-out 9.8s forwards;
+}
+.container:nth-child(3) .card:nth-child(7n+6){
+    animation: fadein .3s ease-in forwards 7.2s, fadeout .3s ease-out 10.0s forwards;
+}
+.container:nth-child(3) .card:nth-child(7n+7){
+    animation: fadein .3s ease-in forwards 7.3s, fadeout .3s ease-out 10.2s forwards;
+}
+
+
+/* 첫번째 컨테이너 + 1.8s */
+.container:nth-child(4) .card:nth-child(7n+1){
+    animation: fadein .3s ease-in forwards 10.2s, fadeout .3s ease-out 12.5s forwards;
+}
+.container:nth-child(4) .card:nth-child(7n+2){
+    animation: fadein .3s ease-in forwards 10.3s, fadeout .3s ease-out 12.7s forwards;
+}
+.container:nth-child(4) .card:nth-child(7n+3){
+    animation: fadein .3s ease-in forwards 10.4s, fadeout .3s ease-out 12.9s forwards;
+}
+.container:nth-child(4) .card:nth-child(7n+4){
+    animation: fadein .3s ease-in forwards 10.5s, fadeout .3s ease-out 13.1s forwards;
+}
+.container:nth-child(4) .card:nth-child(7n+5){
+    animation: fadein .3s ease-in forwards 10.6s, fadeout .3s ease-out 13.3s forwards;
+}
+.container:nth-child(4) .card:nth-child(7n+6){
+    animation: fadein .3s ease-in forwards 10.7s, fadeout .3s ease-out 13.5s forwards;
+}
+.container:nth-child(4) .card:nth-child(7n+7){
+    animation: fadein .3s ease-in forwards 10.8s, fadeout .3s ease-out 13.7s forwards;
+}
+
+
+
+.container:nth-child(5) .card:nth-child(7n+1){
+    animation: fadein .3s ease-in forwards 13.7s, fadeout .3s ease-out 16.0s forwards;
+}
+.container:nth-child(5) .card:nth-child(7n+2){
+    animation: fadein .3s ease-in forwards 13.8s, fadeout .3s ease-out 16.2s forwards;
+}
+.container:nth-child(5) .card:nth-child(7n+3){
+    animation: fadein .3s ease-in forwards 13.9s, fadeout .3s ease-out 16.4s forwards;
+}
+.container:nth-child(5) .card:nth-child(7n+4){
+    animation: fadein .3s ease-in forwards 14.0s, fadeout .3s ease-out 16.6s forwards;
+}
+.container:nth-child(5) .card:nth-child(7n+5){
+    animation: fadein .3s ease-in forwards 14.1s, fadeout .3s ease-out 16.8s forwards;
+}
+.container:nth-child(5) .card:nth-child(7n+6){
+    animation: fadein .3s ease-in forwards 14.2s, fadeout .3s ease-out 17.0s forwards;
+}
+.container:nth-child(5) .card:nth-child(7n+7){
+    animation: fadein .3s ease-in forwards 14.3s, fadeout .3s ease-out 17.2s forwards;
+}
+
+
+
+@keyframes fadein{
+    from{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fadeout{
+    from{
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to{
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+}
